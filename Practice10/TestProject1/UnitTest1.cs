@@ -23,13 +23,22 @@ namespace TestProject1
         [Theory]
         [InlineData(5)]
         [InlineData(10)]
-        [InlineData(15)]
         [InlineData(20)]
-        public void GivenANumberNotDivisibleBy5_ThenReturnsBuzz(int number)
+        public void GivenANumberNotDivisibleBy5_ThenReturnsBuzz(int numb)
         {
             var result =  FizzBuzzGame.Play(5);
             result.Contains("Buzz");
         }
 
+
+        [Theory]
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(9)]
+        public void GivenANumberNotDivisibleBy3_ThenReturnsBuzz(int numb)
+        {
+            var result = FizzBuzzGame.Play(5);
+            result.Contains("Fizz");
+        }
     }
 }
